@@ -1,3 +1,7 @@
+package menu;
+
+import menu.cadastroDeEvento.cadastrarEvento;
+
 import java.util.Scanner;
 
 public class menu {
@@ -14,10 +18,15 @@ public class menu {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Você escolheu a opção 1: Cadastrar");
+                    System.out.println("Você escolheu a opção 1: Cadastrar evento");
+                    cadastrarEvento evento = new cadastrarEvento();
+                    evento.cadastroEvento();
                     break;
                 case 2:
-                    System.out.println("Você escolheu a opção 2: Alterar");
+                    System.out.println("Você escolheu a opção 2: Listar evento");
+                    break;
+                case 3:
+                    System.out.println("Você escolheu a opção 2: Alterar evento");
                     break;
                 case 0:
                     System.out.println("Saindo do programa. Até mais!");
