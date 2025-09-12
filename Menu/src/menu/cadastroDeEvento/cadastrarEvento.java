@@ -1,11 +1,8 @@
 package menu.cadastroDeEvento;
 
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class cadastrarEvento {
@@ -37,7 +34,6 @@ public class cadastrarEvento {
         System.out.println("Evento regisrado com sucesso!");
 
         salvarNoArquivo();
-
     }
 
     private void salvarNoArquivo() {

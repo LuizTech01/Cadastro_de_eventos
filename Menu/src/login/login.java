@@ -21,12 +21,9 @@ public class login {
         System.out.print("Informe sua senha: ");
         String senha = scanner.nextLine();
 
-        if (usuario.equals(usuarioCadastrado.getUser()) &&
-                senha.equals(usuarioCadastrado.getSenha())) {
-
+        if (usuario.equals(usuarioCadastrado.getUser()) && senha.equals(usuarioCadastrado.getSenha())) {
             System.out.println("Login realizado com sucesso!");
             menu.inicio();
-
         } else {
             System.out.println("Login ou senha inválidos");
         }

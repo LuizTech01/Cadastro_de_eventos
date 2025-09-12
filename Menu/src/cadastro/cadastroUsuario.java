@@ -39,6 +39,4 @@ public class cadastroUsuario {
     public String getCpf() {
         return cpf;
     }
-
-
 }
