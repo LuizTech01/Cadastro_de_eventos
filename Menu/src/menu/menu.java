@@ -3,6 +3,7 @@ package menu;
 import menu.cadastroDeEvento.cadastrarEvento;
 import menu.listarEventos.listarEventos;
 import menu.alterarEvento.alterarEvento;
+import menu.participarEvento.participarEvento;
 
 import java.util.Scanner;
 
@@ -34,6 +35,16 @@ public class menu {
                     alterarEvento altera = new alterarEvento();
                     altera.alterarEvento();
                     break;
+                case 4:
+                    System.out.println("Você escolheu a opção 3: Alterar evento");
+                    participarEvento participar = new participarEvento();
+                    participar.confirmarParticipacao();
+                    break;
+                case 5:
+                    System.out.println("Você escolheu a opção 3: Alterar evento");
+                    participarEvento cancelar = new participarEvento();
+                    cancelar.cancelarParticipacao();
+                    break;
                 case 0:
                     System.out.println("Saindo do programa. Até mais!");
                     break;
@@ -51,6 +62,8 @@ public class menu {
         System.out.println("1. Cadastrar novo evento");
         System.out.println("2. Consultar eventos");
         System.out.println("3. Alterar eventos");
+        System.out.println("4. Confimar presenca");
+        System.out.println("5. Cancelar presenca");
         System.out.println("0. Sair");
         System.out.print("Escolha uma opção: ");
     }

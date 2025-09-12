@@ -43,11 +43,11 @@ public class alterarEvento {
         System.out.println("1 - Nome");
         System.out.println("2 - Endereço");
         System.out.println("3 - Categoria");
-        System.out.println("4 - Data e Hora");
+        System.out.println("4 - Hora");
         System.out.println("5 - Descrição");
         System.out.print("Escolha: ");
         int opcao = scanner.nextInt();
-        scanner.nextLine(); // limpar buffer
+        scanner.nextLine();
 
         System.out.print("Digite o novo valor: ");
         String novoValor = scanner.nextLine();
@@ -56,7 +56,7 @@ public class alterarEvento {
             case 1 -> linhas.set(indice, "Nome: " + novoValor);
             case 2 -> linhas.set(indice + 1, "Endereço: " + novoValor);
             case 3 -> linhas.set(indice + 2, "Categoria: " + novoValor);
-            case 4 -> linhas.set(indice + 3, "Data e Hora: " + novoValor);
+            case 4 -> linhas.set(indice + 3, "Horario: " + novoValor);
             case 5 -> linhas.set(indice + 4, "Descrição: " + novoValor);
             default -> {
                 System.out.println("Opção inválida!");

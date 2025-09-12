@@ -3,6 +3,8 @@ package menu.cadastroDeEvento;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class cadastrarEvento {
@@ -13,25 +15,31 @@ public class cadastrarEvento {
     private String descricao;
 
     public void cadastroEvento() {
-
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("Informe o nome do evento ");
+        System.out.print("Informe o nome do evento: ");
         this.nome = scanner.nextLine();
 
-        System.out.printf("Informe o endereco do evento: ");
+        System.out.print("Informe o endereço do evento: ");
         this.endereco = scanner.nextLine();
 
-        System.out.printf("Informe a categoria do evento: ");
+        System.out.print("Informe a categoria do evento: ");
         this.categoria = scanner.nextLine();
 
-        System.out.printf("Informe a data e hora do evento: ");
+        System.out.print("Informe a hora do evento (HH:mm): ");
         this.horario = scanner.nextLine();
 
-        System.out.printf("Informe uma descricao para o evento: ");
+        try {
+            LocalTime.parse(this.horario, DateTimeFormatter.ofPattern("HH:mm"));
+        } catch (Exception e) {
+            System.out.println("Formato inválido. Use HH:mm (ex: 14:30).");
+            return;
+        }
+
+        System.out.print("Informe uma descrição para o evento: ");
         this.descricao = scanner.nextLine();
 
-        System.out.println("Evento regisrado com sucesso!");
+        System.out.println("Evento registrado com sucesso!");
 
         salvarNoArquivo();
     }
@@ -44,7 +52,7 @@ public class cadastrarEvento {
             writer.newLine();
             writer.write("Categoria: " + this.categoria);
             writer.newLine();
-            writer.write("Data e Hora: " + this.horario);
+            writer.write("Hora: " + this.horario);
             writer.newLine();
             writer.write("Descrição: " + this.descricao);
             writer.newLine();
