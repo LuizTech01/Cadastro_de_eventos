@@ -29,11 +29,11 @@ Pacotes principais:
 - `menu.listarEventos` → classe `listarEventos`
 - `menu.alterarEvento` → classe `alterarEvento`
 - `menu.participarEvento` → classe `participarEvento`
-- `menu` → classe `Main.java` com menu interativo
+- `menu` → menu interativo
 
 ## Como Executar
 
 1. Abra o projeto em sua IDE Java preferida.
-2. Compile e execute a classe `Main.java`.
+2. Compile e execute a classe `sistema.java`.
 3. Utilize o menu para cadastrar, listar, alterar eventos e gerenciar participação.
 
